@@ -68,27 +68,17 @@ def summarize_expenses(expense_file_path, budget):
         print(f"{key}, ${amount:.2f}")
 
     total_spent = sum([x.amount for x in expenses])
-    print(green(f"You've spent ${total_spent:.2f} this month!"))
+    print(color(f"You've spent ${total_spent:.2f} this month!", 32))
 
     remaining_budget = budget - total_spent
-
-    print(yellow(f"Remaining Budget ${remaining_budget:.2f} for this month!!"))
-
-
-def green(text):
-    return f"\033[1;32m{text}\033[0m"
+    if remaining_budget < 0:
+        print(color(f"You're over budget by ${remaining_budget:.2f}!", 31))
+    else:
+        print(color(f"Remaining Budget ${remaining_budget:.2f} for this month!!", 33))
 
 
-def red(text):
-    return f"\033[1;31m{text}\033[0m"
-
-
-def blue(text):
-    return f"\033[1;34m{text}\033[0m"
-
-
-def yellow(text):
-    return f"\033[1;33m{text}\033[0m"
+def color(text, code):
+    return f"\033[1;{code}m{text}\033[0m"
 
 
 if __name__ == "__main__":
