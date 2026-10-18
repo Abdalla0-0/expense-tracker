@@ -27,7 +27,7 @@ and see a monthly summary of how much you've spent vs. your budget.
 |------|--------------|
 | `expense.py` | The `Expense` class (name, amount, category) |
 | `expense_tracker.py` | The command-line version |
-| `tracker_logic.py` | Logic for the GUI: loading, saving, and summarizing expenses (no tkinter) |
+| `tracker.py` | Logic for the GUI: loading, saving, and summarizing expenses (no tkinter) |
 | `expense_gui.py` | The tkinter window; imports from `tracker_logic.py` and `expense.py` |
 
 Both versions read and write the same `expense.csv`, so expenses added in one
@@ -103,7 +103,7 @@ You'll be prompted for:
 - Command line: handle bad input (e.g. `abc` for the amount) without crashing
   (the window already does)
 - Command line: use the `csv` module instead of manual `split(",")` so commas
-  inside names don't break parsing (the window already does)
+  inside names don't break parsing (the window already does) or we use database
 - Add a `__str__` method for prettier printing
 - Make the budget optional in the command-line version so you can just view
   past expenses (the window already works without one)
