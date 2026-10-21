@@ -32,7 +32,11 @@ and see a monthly summary of how much you've spent vs. your budget.
 
 Both versions read and write the same `expense.csv`, so expenses added in one
 show up in the other. Run either one from the project folder, since the CSV is
-found relative to where you start the program.
+found relative to where you start the program.  
+
+## Screenshots  
+
+![Expense Tracker Form](screenshots/expense_tracker_form.png)
 
 ## How to Run
 
@@ -108,3 +112,4 @@ You'll be prompted for:
 - Make the budget optional in the command-line version so you can just view
   past expenses (the window already works without one)
 - Window: delete or edit an existing expense
+- Make it into an application  
